@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI开发工具测评站 | AI Tools Review</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0a0f; color: #e0e0e0; min-height: 100vh; }
+    .hero { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); padding: 80px 20px; text-align: center; }
+    .hero h1 { font-size: 2.5rem; background: linear-gradient(90deg, #00d4ff, #7c3aed); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 16px; }
+    .hero p { color: #888; max-width: 600px; margin: 0 auto; font-size: 1.1rem; }
+    .nav { background: rgba(20,20,30,0.95); padding: 16px; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid #222; }
+    .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; gap: 32px; justify-content: center; }
+    .nav a { color: #888; text-decoration: none; font-size: 1rem; transition: color 0.3s; }
+    .nav a:hover { color: #00d4ff; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+    .section-title { font-size: 1.5rem; margin-bottom: 24px; color: #fff; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+    .card { background: #16161e; border: 1px solid #2a2a3a; border-radius: 12px; padding: 24px; transition: transform 0.3s, border-color 0.3s; }
+    .card:hover { transform: translateY(-4px); border-color: #00d4ff; }
+    .card h3 { color: #00d4ff; margin-bottom: 8px; }
+    .card .tag { display: inline-block; background: #7c3aed22; color: #a78bfa; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; margin-bottom: 12px; }
+    .card p { color: #888; font-size: 0.9rem; line-height: 1.6; }
+    .card .price { color: #4ade80; font-size: 1.2rem; font-weight: bold; margin-top: 12px; }
+    .ranking { background: #16161e; border: 1px solid #2a2a3a; border-radius: 12px; padding: 24px; margin-top: 40px; }
+    .ranking-item { display: flex; align-items: center; padding: 12px 0; border-bottom: 1px solid #2a2a3a; }
+    .ranking-item:last-child { border-bottom: none; }
+    .rank { font-size: 1.5rem; font-weight: bold; width: 40px; color: #fbbf24; }
+    .rank-1 { color: #ffd700; } .rank-2 { color: #c0c0c0; } .rank-3 { color: #cd7f32; }
+    .tool-name { flex: 1; font-weight: bold; color: #fff; }
+    .tool-score { color: #00d4ff; font-weight: bold; }
+    footer { text-align: center; padding: 40px; color: #555; border-top: 1px solid #222; margin-top: 60px; }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/">首页</a>
+      <a href="/tools/">工具详情</a>
+      <a href="/comparison/">对比表格</a>
+      <a href="/methodology/">评测方法</a>
+    </div>
+  </nav>
+  <div class="hero">
+    <h1>🤖 AI开发工具实测对比站</h1>
+    <p>客观实测 · 多维度对比 · 选型指南 · 持续更新</p>
+  </div>
+  <div class="container">
+    <h2 class="section-title">📊 工具总览</h2>
+    <div class="grid">
+      <div class="card">
+        <span class="tag">🌍 国际模型</span>
+        <h3>Claude 3.5 Sonnet</h3>
+        <p>Anthropic推出的旗舰模型，代码能力强，长上下文理解优秀</p>
+        <div class="price">¥75/千Token</div>
+      </div>
+      <div class="card">
+        <span class="tag">🌍 国际模型</span>
+        <h3>GPT-4o</h3>
+        <p>OpenAI多模态旗舰模型，API生态成熟，工具调用能力强</p>
+        <div class="price">¥70/千Token</div>
+      </div>
+      <div class="card">
+        <span class="tag">🇨🇳 国产模型</span>
+        <h3>通义千问 Qwen2.5</h3>
+        <p>阿里开源+闭源模型，中文优化好，开源生态活跃</p>
+        <div class="price">¥2/千Token</div>
+      </div>
+      <div class="card">
+        <span class="tag">🇨🇳 国产模型</span>
+        <h3>豆包 Doubao-1.5</h3>
+        <p>字节跳动大模型，视觉理解强，价格竞争力强</p>
+        <div class="price">¥1.5/千Token</div>
+      </div>
+      <div class="card">
+        <span class="tag">🖥️ 本地模型</span>
+        <h3>Ollama</h3>
+        <p>本地运行LLM的利器，支持主流模型，一键部署</p>
+        <div class="price">免费</div>
+      </div>
+      <div class="card">
+        <span class="tag">🔧 开发框架</span>
+        <h3>LangChain</h3>
+        <p>LLM应用开发框架，组件丰富，文档完善</p>
+        <div class="price">开源免费</div>
+      </div>
+    </div>
+    <div class="ranking">
+      <h2 class="section-title">🏆 综合推荐榜</h2>
+      <div class="ranking-item"><span class="rank rank-1">🥇</span><span class="tool-name">GPT-4o</span><span class="tool-score">综合评分 9.2</span></div>
+      <div class="ranking-item"><span class="rank rank-2">🥈</span><span class="tool-name">Claude 3.5 Sonnet</span><span class="tool-score">综合评分 9.0</span></div>
+      <div class="ranking-item"><span class="rank rank-3">🥉</span><span class="tool-name">通义千问 Qwen2.5</span><span class="tool-score">综合评分 8.5</span></div>
+      <div class="ranking-item"><span class="rank">4</span><span class="tool-name">豆包 Doubao-1.5</span><span class="tool-score">综合评分 8.2</span></div>
+      <div class="ranking-item"><span class="rank">5</span><span class="tool-name">Ollama</span><span class="tool-score">综合评分 7.8</span></div>
+    </div>
+  </div>
+  <footer>
+    <p>AI开发工具测评站 · 数据更新: 2026-04-26 · 仅供参考</p>
+  </footer>
+</body>
+</html>

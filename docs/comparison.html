@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>对比表格 | AI Tools Review</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0a0f; color: #e0e0e0; min-height: 100vh; }
+    .nav { background: rgba(20,20,30,0.95); padding: 16px; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid #222; }
+    .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; gap: 32px; justify-content: center; }
+    .nav a { color: #888; text-decoration: none; font-size: 1rem; transition: color 0.3s; }
+    .nav a:hover, .nav a.active { color: #00d4ff; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+    h1 { font-size: 2rem; margin-bottom: 32px; color: #fff; }
+    .section-label { font-size: 1rem; color: #00d4ff; margin: 32px 0 16px; }
+    table { width: 100%; border-collapse: collapse; background: #16161e; border-radius: 12px; overflow: hidden; }
+    th { background: #1e1e2a; padding: 14px 16px; text-align: left; font-size: 0.85rem; color: #888; border-bottom: 1px solid #2a2a3a; }
+    td { padding: 14px 16px; border-bottom: 1px solid #2a2a3a; font-size: 0.9rem; }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: #1a1a24; }
+    .tag { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.75rem; }
+    .tag-intl { background: #3b82f622; color: #60a5fa; }
+    .tag-cn { background: #f9731622; color: #fb923c; }
+    .tag-local { background: #22c55e22; color: #4ade80; }
+    .tag-framework { background: #a855f722; color: #c084fc; }
+    .highlight { background: #00d4ff15; }
+    .best { color: #4ade80; font-weight: bold; }
+    .good { color: #fbbf24; }
+    footer { text-align: center; padding: 40px; color: #555; border-top: 1px solid #222; margin-top: 60px; }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/">首页</a>
+      <a href="/tools/">工具详情</a>
+      <a href="/comparison/" class="active">对比表格</a>
+      <a href="/methodology/">评测方法</a>
+    </div>
+  </nav>
+  <div class="container">
+    <h1>📊 多维度对比表</h1>
+    
+    <div class="section-label">🌍 国际模型对比</div>
+    <table>
+      <thead>
+        <tr><th>工具</th><th>价格(¥/千Token)</th><th>首Token延迟</th><th>MMLU</th><th>代码能力</th><th>易用性</th><th>推荐场景</th></tr>
+      </thead>
+      <tbody>
+        <tr class="highlight"><td><strong>GPT-4o</strong></td><td class="best">70</td><td>~700ms</td><td class="best">88.7%</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>通用开发首选</td></tr>
+        <tr><td>Claude 3.5 Sonnet</td><td>75</td><td>~800ms</td><td>88.7%</td><td class="best">⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>复杂代码/长文本</td></tr>
+        <tr><td>Gemini 2.0 Ultra</td><td>50</td><td>~900ms</td><td>87.8%</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>长上下文/多模态</td></tr>
+      </tbody>
+    </table>
+
+    <div class="section-label">🇨🇳 国产模型对比</div>
+    <table>
+      <thead>
+        <tr><th>工具</th><th>价格(¥/千Token)</th><th>首Token延迟</th><th>MMLU</th><th>中文能力</th><th>易用性</th><th>推荐场景</th></tr>
+      </thead>
+      <tbody>
+        <tr class="highlight"><td><strong>通义千问 Qwen2.5</strong></td><td class="best">2</td><td class="best">~600ms</td><td class="best">84.2%</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>性价比首选/开源</td></tr>
+        <tr><td>豆包 Doubao-1.5</td><td class="best">1.5</td><td>~500ms</td><td>82.1%</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>预算敏感/视觉任务</td></tr>
+        <tr><td>文心一言 ERNIE 4.0</td><td>3</td><td>~700ms</td><td>81.5%</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>百度生态集成</td></tr>
+        <tr><td>MiniMax</td><td>2</td><td>~550ms</td><td>80.9%</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>语音交互/海螺AI</td></tr>
+      </tbody>
+    </table>
+
+    <div class="section-label">🖥️ 本地模型对比</div>
+    <table>
+      <thead>
+        <tr><th>工具</th><th>成本</th><th>硬件要求</th><th>速度</th><th>隐私性</th><th>易用性</th><th>推荐场景</th></tr>
+      </thead>
+      <tbody>
+        <tr class="highlight"><td><strong>Ollama</strong></td><td class="best">免费</td><td>8GB+ RAM</td><td>中</td><td class="best">⭐⭐⭐⭐⭐</td><td class="best">⭐⭐⭐⭐⭐</td><td>快速本地尝鲜</td></tr>
+        <tr><td>LM Studio</td><td>免费</td><td>8GB+ RAM</td><td>中</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>非技术用户</td></tr>
+        <tr><td>vLLM</td><td>免费</td><td>24GB+ VRAM</td><td class="best">高</td><td>⭐⭐⭐⭐⭐</td><td class="good">⭐⭐⭐</td><td>生产级推理</td></tr>
+      </tbody>
+    </table>
+
+    <div class="section-label">🔧 开发框架对比</div>
+    <table>
+      <thead>
+        <tr><th>框架</th><th>价格</th><th>学习曲线</th><th>文档质量</th><th>社区活跃</th><th>适用场景</th></tr>
+      </thead>
+      <tbody>
+        <tr class="highlight"><td><strong>LangChain</strong></td><td class="best">免费</td><td>中等</td><td>⭐⭐⭐⭐</td><td class="best">⭐⭐⭐⭐⭐</td><td>通用LLM应用</td></tr>
+        <tr><td>LlamaIndex</td><td>免费</td><td>中等</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>RAG/知识库</td></tr>
+        <tr><td>AutoGPT</td><td>免费</td><td class="good">较陡</td><td>⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>自主代理实验</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <footer>
+    <p>AI开发工具测评站 · 数据更新: 2026-04-26 · 仅供参考</p>
+  </footer>
+</body>
+</html>

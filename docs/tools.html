@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>工具详情 | AI Tools Review</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0a0f; color: #e0e0e0; min-height: 100vh; }
+    .nav { background: rgba(20,20,30,0.95); padding: 16px; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid #222; }
+    .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; gap: 32px; justify-content: center; }
+    .nav a { color: #888; text-decoration: none; font-size: 1rem; transition: color 0.3s; }
+    .nav a:hover, .nav a.active { color: #00d4ff; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+    h1 { font-size: 2rem; margin-bottom: 32px; color: #fff; }
+    .tool-section { margin-bottom: 48px; }
+    .section-label { font-size: 1.2rem; color: #00d4ff; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid #2a2a3a; }
+    .tool-detail { background: #16161e; border: 1px solid #2a2a3a; border-radius: 12px; padding: 24px; margin-bottom: 16px; }
+    .tool-detail h3 { color: #fff; margin-bottom: 12px; font-size: 1.1rem; }
+    .metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 12px; }
+    .metric { background: #1e1e2a; padding: 12px; border-radius: 8px; text-align: center; }
+    .metric-label { font-size: 0.75rem; color: #666; margin-bottom: 4px; }
+    .metric-value { font-size: 1.1rem; font-weight: bold; color: #4ade80; }
+    .metric-value.warning { color: #fbbf24; }
+    .metric-value.danger { color: #f87171; }
+    .desc { color: #888; font-size: 0.9rem; line-height: 1.6; }
+    footer { text-align: center; padding: 40px; color: #555; border-top: 1px solid #222; margin-top: 60px; }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/">首页</a>
+      <a href="/tools/" class="active">工具详情</a>
+      <a href="/comparison/">对比表格</a>
+      <a href="/methodology/">评测方法</a>
+    </div>
+  </nav>
+  <div class="container">
+    <h1>🛠️ 工具详情</h1>
+    
+    <div class="tool-section">
+      <div class="section-label">🌍 国际模型</div>
+      <div class="tool-detail">
+        <h3>Claude 3.5 Sonnet (Anthropic)</h3>
+        <p class="desc">代码能力强，长上下文窗口200K，工具调用准确，适合复杂代码任务</p>
+        <div class="metrics">
+          <div class="metric"><div class="metric-label">价格</div><div class="metric-value">¥75/千Token</div></div>
+          <div class="metric"><div class="metric-label">首Token延迟</div><div class="metric-value">~800ms</div></div>
+          <div class="metric"><div class="metric-label">MMLU基准</div><div class="metric-value">88.7%</div></div>
+          <div class="metric"><div class="metric-label">易用性</div><div class="metric-value">⭐⭐⭐⭐⭐</div></div>
+        </div>
+      </div>
+      <div class="tool-detail">
+        <h3>GPT-4o (OpenAI)</h3>
+        <p class="desc">多模态能力强，API生态成熟，工具调用稳定，ChatGPT集成好</p>
+        <div class="metrics">
+          <div class="metric"><div class="metric-label">价格</div><div class="metric-value">¥70/千Token</div></div>
+          <div class="metric"><div class="metric-label">首Token延迟</div><div class="metric-value">~700ms</div></div>
+          <div class="metric"><div class="metric-label">MMLU基准</div><div class="metric-value">88.7%</div></div>
+          <div class="metric"><div class="metric-label">易用性</div><div class="metric-value">⭐⭐⭐⭐⭐</div></div>
+        </div>
+      </div>
+      <div class="tool-detail">
+        <h3>Gemini 2.0 (Google)</h3>
+        <p class="desc">长上下文1M，原生多模态，Google生态集成，中文支持持续优化</p>
+        <div class="metrics">
+          <div class="metric"><div class="metric-label">价格</div><div class="metric-value">¥50/千Token</div></div>
+          <div class="metric"><div class="metric-label">首Token延迟</div><div class="metric-value">~900ms</div></div>
+          <div class="metric"><div class="metric-label">MMLU基准</div><div class="metric-value">87.8%</div></div>
+          <div class="metric"><div class="metric-label">易用性</div><div class="metric-value">⭐⭐⭐⭐</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tool-section">
+      <div class="section-label">🇨🇳 国产模型</div>
+      <div class="tool-detail">
+        <h3>通义千问 Qwen2.5 (阿里)</h3>
+        <p class="desc">开源+闭源双版本，中文优化出色，开源社区活跃，72B版本性能接近GPT-4</p>
+        <div class="metrics">
+          <div class="metric"><div class="metric-label">价格</div><div class="metric-value">¥2/千Token</div></div>
+          <div class="metric"><div class="metric-label">首Token延迟</div><div class="metric-value">~600ms</div></div>
+          <div class="metric"><div class="metric-label">MMLU基准</div><div class="metric-value">84.2%</div></div>
+          <div class="metric"><div class="metric-label">易用性</div><div class="metric-value">⭐⭐⭐⭐⭐</div></div>
+        </div>
+      </div>
+      <div class="tool-detail">
+        <h3>豆包 Doubao-1.5 (字节)</h3>
+        <p class="desc">视觉理解强，价格低，抖音/字节生态集成好，适合国内场景</p>
+        <div class="metrics">
+          <div class="metric"><div class="metric-label">价格</div><div class="metric-value">¥1.5/千Token</div></div>
+          <div class="metric"><div class="metric-label">首Token延迟</div><div class="metric-value">~500ms</div></div>
+          <div class="metric"><div class="metric-label">MMLU基准</div><div class="metric-value">82.1%</div></div>
+          <div class="metric"><div class="metric-label">易用性</div><div class="metric-value">⭐⭐⭐⭐</div></div>
+        </div>
+      </div>
+      <div class="tool-detail">
+        <h3>文心一言 ERNIE 4.0 (百度)</h3>
+        <p class="desc">百度文心大模型，百度生态集成，中文创作能力强</p>
+        <div class="metrics">
+          <div class="metric"><div class="metric-label">价格</div><div class="metric-value">¥3/千Token</div></div>
+          <div class="metric"><div class="metric-label">首Token延迟</div><div class="metric-value">~700ms</div></div>
+          <div class="metric"><div class="metric-label">MMLU基准</div><div class="metric-value">81.5%</div></div>
+          <div class="metric"><div class="metric-label">易用性</div><div class="metric-value">⭐⭐⭐⭐</div></div>
+        </div>
+      </div>
+      <div class="tool-detail">
+        <h3>MiniMax (稀宇科技)</h3>
+        <p class="desc">海螺AI语音交互强，MoE架构，多模态能力强</p>
+        <div class="metrics">
+          <div class="metric"><div class="metric-label">价格</div><div class="metric-value">¥2/千Token</div></div>
+          <div class="metric"><div class="metric-label">首Token延迟</div><div class="metric-value">~550ms</div></div>
+          <div class="metric"><div class="metric-label">MMLU基准</div><div class="metric-value">80.9%</div></div>
+          <div class="metric"><div class="metric-label">易用性</div><div class="metric-value">⭐⭐⭐⭐</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tool-section">
+      <div class="section-label">🖥️ 本地模型</div>
+      <div class="tool-detail">
+        <h3>Ollama</h3>
+        <p class="desc">本地LLM运行工具，支持Llama/Qwen/Mistral等，一键部署，Mac/Windows/Linux</p>
+        <div class="metrics">
+          <div class="metric"><div class="metric-label">价格</div><div class="metric-value">免费(硬件成本)</div></div>
+          <div class="metric"><div class="metric-label">速度</div><div class="metric-value warning">取决于硬件</div></div>
+          <div class="metric"><div class="metric-label">隐私性</div><div class="metric-value">⭐⭐⭐⭐⭐</div></div>
+          <div class="metric"><div class="metric-label">易用性</div><div class="metric-value">⭐⭐⭐⭐⭐</div></div>
+        </div>
+      </div>
+      <div class="tool-detail">
+        <h3>LM Studio</h3>
+        <p class="desc">桌面端本地LLM运行器，图形界面，支持GGUF格式，适合非技术用户</p>
+        <div class="metrics">
+          <div class="metric"><div class="metric-label">价格</div><div class="metric-value">免费(硬件成本)</div></div>
+          <div class="metric"><div class="metric-label">速度</div><div class="metric-value warning">取决于硬件</div></div>
+          <div class="metric"><div class="metric-label">隐私性</div><div class="metric-value">⭐⭐⭐⭐⭐</div></div>
+          <div class="metric"><div class="metric-label">易用性</div><div class="metric-value">⭐⭐⭐⭐⭐</div></div>
+        </div>
+      </div>
+      <div class="tool-detail">
+        <h3>vLLM</h3>
+        <p class="desc">高性能LLM推理引擎，PagedAttention，支持连续批处理，生产级</p>
+        <div class="metrics">
+          <div class="metric"><div class="metric-label">价格</div><div class="metric-value">免费(硬件成本)</div></div>
+          <div class="metric"><div class="metric-label">吞吐量</div><div class="metric-value">⭐⭐⭐⭐⭐</div></div>
+          <div class="metric"><div class="metric-label">隐私性</div><div class="metric-value">⭐⭐⭐⭐⭐</div></div>
+          <div class="metric"><div class="metric-label">易用性</div><div class="metric-value warning">⭐⭐⭐</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tool-section">
+      <div class="section-label">🔧 开发框架</div>
+      <div class="tool-detail">
+        <h3>LangChain</h3>
+        <p class="desc">最流行的LLM应用框架，LCEL表达式语言，丰富的工具集成，活跃社区</p>
+        <div class="metrics">
+          <div class="metric"><div class="metric-label">价格</div><div class="metric-value">开源免费</div></div>
+          <div class="metric"><div class="metric-label">学习曲线</div><div class="metric-value warning">中等</div></div>
+          <div class="metric"><div class="metric-label">文档质量</div><div class="metric-value">⭐⭐⭐⭐</div></div>
+          <div class="metric"><div class="metric-label">活跃度</div><div class="metric-value">⭐⭐⭐⭐⭐</div></div>
+        </div>
+      </div>
+      <div class="tool-detail">
+        <h3>LlamaIndex</h3>
+        <p class="desc">专注RAG和知识库构建，数据连接器丰富，索引策略多样</p>
+        <div class="metrics">
+          <div class="metric"><div class="metric-label">价格</div><div class="metric-value">开源免费</div></div>
+          <div class="metric"><div class="metric-label">学习曲线</div><div class="metric-value">⭐⭐⭐</div></div>
+          <div class="metric"><div class="metric-label">文档质量</div><div class="metric-value">⭐⭐⭐⭐</div></div>
+          <div class="metric"><div class="metric-label">活跃度</div><div class="metric-value">⭐⭐⭐⭐</div></div>
+        </div>
+      </div>
+      <div class="tool-detail">
+        <h3>AutoGPT</h3>
+        <p class="desc">AI自主代理先驱，任务拆解执行，端到端自动化实验性强</p>
+        <div class="metrics">
+          <div class="metric"><div class="metric-label">价格</div><div class="metric-value">开源免费</div></div>
+          <div class="metric"><div class="metric-label">学习曲线</div><div class="metric-value danger">较陡</div></div>
+          <div class="metric"><div class="metric-label">文档质量</div><div class="metric-value warning">⭐⭐⭐</div></div>
+          <div class="metric"><div class="metric-label">成熟度</div><div class="metric-value warning">实验性</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p>AI开发工具测评站 · 数据更新: 2026-04-26 · 仅供参考</p>
+  </footer>
+</body>
+</html>
