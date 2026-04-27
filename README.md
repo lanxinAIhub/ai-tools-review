@@ -4,7 +4,7 @@
 
 🌐 **在线访问**：https://lanxinAIhub.github.io/ai-tools-review/
 
-## 📋 简介
+[![CI](https://github.com/lanxinAIhub/ai-tools-review/actions/workflows/ci.yml/badge.svg)](https://github.com/lanxinAIhub/ai-tools-review/actions)\n[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)\n\n## 📋 简介
 
 本项目对主流AI开发工具进行客观实测对比，包括：
 
